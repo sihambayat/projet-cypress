@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
+      - run: npx cypress run --record --key ${{ secrets.x}}
       - run: npx cypress run
       - uses: actions/upload-artifact@v3
         with:
